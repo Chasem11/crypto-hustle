@@ -3,6 +3,7 @@ const API_KEY = import.meta.env.VITE_APP_API_KEY;
 
 const CoinInfo = ({ image, name, symbol }) => {
     const [price, setPrice] = useState(null);
+
   
     useEffect(() => {
       const getCoinPrice = async () => {
@@ -13,7 +14,8 @@ const CoinInfo = ({ image, name, symbol }) => {
   
       getCoinPrice().catch(console.error);
     }, [symbol]);
-  
+    
+    
     return (
       <div>
         {price ? (
