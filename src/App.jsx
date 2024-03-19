@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import CoinInfo from "./Components/CoinInfo";
+import SideNav from "./Components/SideNav";
 
 function App() {
   const [list, setList] = useState(null);
@@ -37,6 +38,7 @@ function App() {
 
   return (
     <div className="whole-page">
+      <SideNav />
       <h1>My Crypto List</h1>
       <input
         type="text"
